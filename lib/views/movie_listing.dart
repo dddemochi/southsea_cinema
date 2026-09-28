@@ -38,15 +38,17 @@ class _MovieListingState extends State<MovieListing> {
                 }
               },
               dropdownMenuEntries: [
-                DropdownMenuEntry(value: 1, label: '1 Ticket'),
-                DropdownMenuEntry(value: 2, label: '2 Tickets'),
-                DropdownMenuEntry(value: 3, label: '3 Tickets'),
-                DropdownMenuEntry(value: 4, label: '4 Tickets'),
-                DropdownMenuEntry(value: 5, label: '5 Tickets'),
+                DropdownMenuEntry(value: 1, label: '1'),
+                DropdownMenuEntry(value: 2, label: '2'),
+                DropdownMenuEntry(value: 3, label: '3'),
+                DropdownMenuEntry(value: 4, label: '4'),
+                DropdownMenuEntry(value: 5, label: '5'),
               ],
             ),
-            ElevatedButton(onPressed: () => print('$_ticketQuantity tickets were added to order'),
-            child: const Text ('Add to order'))
+            ElevatedButton(
+                onPressed: () =>
+                    print('$_ticketQuantity tickets were added to order'),
+                child: const Text('Add to order'))
           ],
         ),
       ),
