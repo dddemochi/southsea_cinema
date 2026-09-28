@@ -15,7 +15,14 @@ class MovieListing extends StatelessWidget {
         elevation: 0,
       ),
       drawer: const NavDrawer(),
-      body: const SizedBox.shrink(),
+      body: Container(
+        child: Column(
+          children: [
+            const Text('Spirited Away (2001)'),
+            Text ('The movie is about a girl named chiriho who finds herself trapped in another world, and must find a way to escape and save her parents.')
+          ],
+        ),
+      ),
     );
   }
 }
