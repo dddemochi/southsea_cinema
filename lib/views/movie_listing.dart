@@ -61,8 +61,13 @@ class _TicketDropdownState extends State<TicketDropdown> {
               ],
             ),
           ElevatedButton(
-              onPressed: () =>
-                  print('$_ticketQuantity tickets were added to order'),
+              onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text('$_ticketQuantity tickets were added to order'),
+                ),
+              );
+              },
               child: const Text('Add to order'))
       ]
     );
