@@ -15,7 +15,7 @@ class MovieListing extends StatelessWidget {
         elevation: 0,
       ),
       drawer: const NavDrawer(),
-      body: Container(
+      body: Container(width: double.infinity, color: cinemaBackground, padding: const EdgeInsets.all(20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -75,6 +75,10 @@ class _TicketDropdownState extends State<TicketDropdown> {
           const SizedBox(width: 20),
           DropdownMenu<int>(
             initialSelection: 1,
+            inputDecorationTheme: const InputDecorationTheme(
+              filled: true,
+              fillColor:cinemaFontWhite,
+            ),
             onSelected: (int? value) {
               if (value != null) {
                 setState(() {
