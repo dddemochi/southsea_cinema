@@ -98,7 +98,35 @@ class _TicketDropdownState extends State<TicketDropdown> {
           Text('Adult (£7.50)'),
         ]),
         const SizedBox(height: 30),
-        Row(children: [
+        LayoutBuilder(
+          builder: (context, constraints) {
+            if (constraints.maxWidth < 600) {
+              return Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(height: 20),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
+                        backgroundColor: cinemaBrand,
+                      ),
+                      onPressed: () {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            content:
+                                Text('$_ticketQuantity tickets were added to order'),
+                          ),
+                        );
+                      },
+                      child: const Text('Add to order',
+                          style: TextStyle(
+                            color: cinemaFontWhite,
+                          ))),
+                ],
+              );
+          }
+          else{
+        return Row(children: [
           const SizedBox(width: 20),
           ElevatedButton(
               style: ElevatedButton.styleFrom(
@@ -117,8 +145,11 @@ class _TicketDropdownState extends State<TicketDropdown> {
                   style: TextStyle(
                     color: cinemaFontWhite,
                   ))),
-        ])
-      ],
+        ],);
+          }
+          }
+        )
+  ],
     );
   }
 }
