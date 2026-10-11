@@ -8,6 +8,7 @@ class SouthseaCinema {
   final String imagepath;
   final double time;
   final String location;
+  final String agerating;
 
   const SouthseaCinema({
     required this.id,
@@ -19,5 +20,6 @@ class SouthseaCinema {
     required this.time,
     required this.location,
     required this.price,
+    required this.agerating,
   });
 }
