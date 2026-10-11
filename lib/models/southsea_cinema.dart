@@ -6,8 +6,7 @@ class SouthseaCinema {
   final double price;
   final String description;
   final String imagepath;
-  final String spiritedaway;
-  final int time;
+  final double time;
   final String location;
 
   const SouthseaCinema({
@@ -17,7 +16,6 @@ class SouthseaCinema {
     required this.capacity,
     required this.description,
     required this.imagepath,
-    required this.spiritedaway,
     required this.time,
     required this.location,
     required this.price,
