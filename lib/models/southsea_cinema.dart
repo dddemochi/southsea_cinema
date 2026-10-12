@@ -22,4 +22,10 @@ class SouthseaCinema {
     required this.price,
     required this.agerating,
   });
+
+  String get formattedPrice => '£${price.toStringAsFixed(2)}';
+
+  bool get isChildFriendly => agerating == '(PG)' || agerating == '(U)';
+
+  bool get isAdultOnly => agerating == '(18)';
 }

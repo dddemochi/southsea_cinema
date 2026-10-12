@@ -64,7 +64,7 @@ class MovieListing extends StatelessWidget {
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 10),
-                const TicketDropdown(),
+                TicketDropdown(cinema: cinema),
               ],
             ),
           ),
@@ -73,7 +73,9 @@ class MovieListing extends StatelessWidget {
 }
 
 class TicketDropdown extends StatefulWidget {
-  const TicketDropdown({super.key});
+  final SouthseaCinema cinema;
+  
+  const TicketDropdown({super.key, required this.cinema});
 
   @override
   State<TicketDropdown> createState() => _TicketDropdownState();
@@ -111,7 +113,7 @@ class _TicketDropdownState extends State<TicketDropdown> {
             ],
           ),
           const SizedBox(width: 20),
-          Text('Adult (£7.50)'),
+          Text('Adult (${widget.cinema.formattedPrice})',),
         ]),
         const SizedBox(height: 30),
         LayoutBuilder(builder: (context, constraints) {
