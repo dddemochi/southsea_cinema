@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:southsea_cinema/models/southsea_cinema.dart';
+import 'package:southsea_cinema/constants.dart';
 
 class Cinemacard extends StatelessWidget {
   final SouthseaCinema cinema;
@@ -9,7 +10,8 @@ class Cinemacard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+      color: cinemaBackground,
+      margin: const EdgeInsets.symmetric(vertical: 0, horizontal: 4.0),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
@@ -20,8 +22,8 @@ class Cinemacard extends StatelessWidget {
               children: [
                 Image.asset(
                   cinema.imagepath,
-                  width: 80,
-                  height: 80,
+                  width: 240,
+                  height: 360,
                   fit: BoxFit.cover,
                 ),
                 const SizedBox(width: 16),
@@ -32,15 +34,15 @@ class Cinemacard extends StatelessWidget {
                       Text(
                         cinema.name,
                         style: const TextStyle(
-                          fontSize: 18,
+                          fontSize: 22,
                           fontWeight: FontWeight.bold,
-                          color: Color(0xFFFFFFFF),
+                          color: cinemaBrand,
                         ),
                       ),
                       const SizedBox(height: 8),
                       Text(
                         cinema.description,
-                        style: const TextStyle(color: Color(0xFFFFFFFF)),
+                        style: const TextStyle(color: cinemaFontWhite, fontSize: 16),
                       ),
                       const SizedBox(height: 8),
                       Text(
@@ -48,12 +50,14 @@ class Cinemacard extends StatelessWidget {
                         style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
-                          color: Color(0xFFFFFFFF),
+                          color: cinemaFontWhite,
                         ),
                       ),
+                      const SizedBox(height: 8),
                       Text(
-                        'screening time: ${cinema.time.toStringAsFixed(2)}',
-                        style: const TextStyle(color: Color(0xFFFFFFFF)),
+                        cinema.time,
+                        style: const TextStyle(color: cinemaFontWhite, fontSize: 14),
+                        
                       ),
                     ],
                   ),
@@ -72,8 +76,14 @@ class Cinemacard extends StatelessWidget {
                   ),
                 ),
                 ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
+                        backgroundColor: cinemaBrand,
+                      ),
                   onPressed: () {},
-                  child: const Text('Book'),
+                  child: const Text('Book',style: TextStyle(
+                            color:Color(0xFFFFFFFF) ,),)
+                
                 ),
               ],
             ),

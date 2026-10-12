@@ -6,7 +6,7 @@ class SouthseaCinema {
   final double price;
   final String description;
   final String imagepath;
-  final double time;
+  final String time;
   final String location;
   final String agerating;
 
