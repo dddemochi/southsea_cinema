@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:southsea_cinema/models/southsea_cinema.dart';
 import 'package:southsea_cinema/constants.dart';
+import 'package:southsea_cinema/views/movie_listing.dart';
+
 
 class Cinemacard extends StatelessWidget {
   final SouthseaCinema cinema;
@@ -80,7 +82,16 @@ class Cinemacard extends StatelessWidget {
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
                         backgroundColor: cinemaBrand,
                       ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) { 
+                          return MovieListing(cinema: cinema);
+                        }
+                      ),
+                    );
+                  },
                   child: const Text('Book',style: TextStyle(
                             color:Color(0xFFFFFFFF) ,),)
                 

@@ -1,7 +1,7 @@
 class SouthseaCinema {
   final String id;
   final String name;
-  final int quantityoftickets;
+  final String quantityoftickets;
   final int capacity;
   final double price;
   final String description;
