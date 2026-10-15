@@ -1,4 +1,4 @@
-class SouthseaCinema {
+class Movie {
   final String id;
   final String name;
   final String quantityoftickets;
@@ -10,7 +10,7 @@ class SouthseaCinema {
   final String location;
   final String agerating;
 
-  const SouthseaCinema({
+  const Movie({
     required this.id,
     required this.name,
     required this.quantityoftickets,

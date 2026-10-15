@@ -5,7 +5,7 @@ import 'package:southsea_cinema/views/movie_listing.dart';
 
 
 class Cinemacard extends StatelessWidget {
-  final SouthseaCinema cinema;
+  final Movie cinema;
 
   const Cinemacard({super.key, required this.cinema});
 

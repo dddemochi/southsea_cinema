@@ -2,11 +2,11 @@ import'package:flutter_test/flutter_test.dart';
 import 'package:southsea_cinema/models/southsea_cinema.dart';
 
 void main(){
-  group('SouthseaCinema', () {
-    test('creates cinema instance with given properties', () {
-      const cinema = SouthseaCinema(
+  group('Movie', () {
+    test('creates movie instance with given properties', () {
+      const cinema = Movie(
         id: '1',
-        name: 'Test Cinema',
+        name: 'Test Movie',
         location: 'Test Location',
         quantityoftickets: '5',
         capacity: 100,
@@ -19,7 +19,7 @@ void main(){
 
       expect(cinema.formattedPrice, equals('£7.50'));
       expect(cinema.id, equals('1'));
-      expect(cinema.name, equals('Test Cinema'));
+      expect(cinema.name, equals('Test Movie'));
       expect(cinema.location, equals('Test Location'));
       expect(cinema.quantityoftickets, equals('5'));
       expect(cinema.capacity, equals(100));
@@ -30,11 +30,11 @@ void main(){
       expect(cinema.agerating, equals('PG'));
     });
   });
-  group('SouthseaCinema', () {
-    test('creates cinema instance with given properties', () {
-      const cinema = SouthseaCinema(
+  group('Movie', () {
+    test('creates movie instance with given properties', () {
+      const cinema = Movie(
         id: '1',
-        name: 'Test Cinema',
+        name: 'Test Movie',
         location: 'Test Location',
         quantityoftickets: '5',
         capacity: 100,

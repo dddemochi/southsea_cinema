@@ -9,7 +9,7 @@ class MenuScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     final southseaCinemaRepository = SouthseaCinemaRepository();
-    final List<SouthseaCinema> cinemas = southseaCinemaRepository.getSouthseaCinemas();
+    final List<Movie> cinemas = southseaCinemaRepository.getSouthseaCinemas();
 
     return Scaffold(
       appBar: AppBar(

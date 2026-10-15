@@ -4,7 +4,7 @@ import 'package:southsea_cinema/widgets/nav_drawer.dart';
 import 'package:southsea_cinema/models/southsea_cinema.dart';
 
 class MovieListing extends StatelessWidget {
-  final SouthseaCinema cinema;
+  final Movie cinema;
   final int maxQuantity;
 
   const MovieListing({super.key, required this.cinema, this.maxQuantity = 5});
@@ -73,7 +73,7 @@ class MovieListing extends StatelessWidget {
 }
 
 class TicketDropdown extends StatefulWidget {
-  final SouthseaCinema cinema;
+  final Movie cinema;
   
   const TicketDropdown({super.key, required this.cinema});
 
