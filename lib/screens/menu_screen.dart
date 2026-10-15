@@ -3,7 +3,7 @@ import 'package:southsea_cinema/models/southsea_cinema.dart';
 import 'package:southsea_cinema/repositories/southseacinema_repository.dart';
 import 'package:southsea_cinema/widgets/cinema_card.dart';
 
-class MenuScreen extends StatelessWidget{
+class MenuScreen extends StatelessWidget {
   const MenuScreen({super.key});
 
   @override
@@ -22,6 +22,5 @@ class MenuScreen extends StatelessWidget{
         },
       ),
     );
-  
   }
 }

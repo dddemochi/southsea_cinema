@@ -34,6 +34,7 @@ class SouthseaCinemaRepository {
       ),
     ];
   }
+
   Movie? getMovieById(String id) {
     for (final cinema in getSouthseaCinemas()) {
       if (cinema.id == id) {

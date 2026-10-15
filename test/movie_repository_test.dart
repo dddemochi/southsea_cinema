@@ -10,7 +10,7 @@ void main() {
 
       expect(cinemas.length, 2);
     });
-      test('getSandwiches contains valid Footlong and Six-Inch subs', () {
+    test('getSandwiches contains valid Footlong and Six-Inch subs', () {
       final SouthseaCinemaRepository repository = SouthseaCinemaRepository();
       final List<Movie> cinemas = repository.getSouthseaCinemas();
 
@@ -26,7 +26,7 @@ void main() {
       expect(kaleidoscope.price, 7.50);
       expect(kaleidoscope.imagepath, isNotEmpty);
     });
-        test('getMovieById returns matching movie when id exists', () {
+    test('getMovieById returns matching movie when id exists', () {
       final SouthseaCinemaRepository repository = SouthseaCinemaRepository();
       final Movie? movie = repository.getMovieById('0');
 
@@ -41,6 +41,5 @@ void main() {
 
       expect(movie, isNull);
     });
-});
+  });
 }
-

@@ -74,7 +74,7 @@ class MovieListing extends StatelessWidget {
 
 class TicketDropdown extends StatefulWidget {
   final Movie cinema;
-  
+
   const TicketDropdown({super.key, required this.cinema});
 
   @override
@@ -113,7 +113,9 @@ class _TicketDropdownState extends State<TicketDropdown> {
             ],
           ),
           const SizedBox(width: 20),
-          Text('Adult (${widget.cinema.formattedPrice})',),
+          Text(
+            'Adult (${widget.cinema.formattedPrice})',
+          ),
         ]),
         const SizedBox(height: 30),
         LayoutBuilder(builder: (context, constraints) {

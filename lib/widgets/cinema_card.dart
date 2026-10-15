@@ -3,7 +3,6 @@ import 'package:southsea_cinema/models/southsea_cinema.dart';
 import 'package:southsea_cinema/constants.dart';
 import 'package:southsea_cinema/views/movie_listing.dart';
 
-
 class Cinemacard extends StatelessWidget {
   final Movie cinema;
 
@@ -44,7 +43,8 @@ class Cinemacard extends StatelessWidget {
                       const SizedBox(height: 8),
                       Text(
                         cinema.description,
-                        style: const TextStyle(color: cinemaFontWhite, fontSize: 16),
+                        style: const TextStyle(
+                            color: cinemaFontWhite, fontSize: 16),
                       ),
                       const SizedBox(height: 8),
                       Text(
@@ -58,8 +58,8 @@ class Cinemacard extends StatelessWidget {
                       const SizedBox(height: 8),
                       Text(
                         cinema.time,
-                        style: const TextStyle(color: cinemaFontWhite, fontSize: 14),
-                        
+                        style: const TextStyle(
+                            color: cinemaFontWhite, fontSize: 14),
                       ),
                     ],
                   ),
@@ -78,24 +78,25 @@ class Cinemacard extends StatelessWidget {
                   ),
                 ),
                 ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
-                        backgroundColor: cinemaBrand,
-                      ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) { 
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.zero),
+                      backgroundColor: cinemaBrand,
+                    ),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) {
                           return MovieListing(cinema: cinema);
-                        }
+                        }),
+                      );
+                    },
+                    child: const Text(
+                      'Book',
+                      style: TextStyle(
+                        color: Color(0xFFFFFFFF),
                       ),
-                    );
-                  },
-                  child: const Text('Book',style: TextStyle(
-                            color:Color(0xFFFFFFFF) ,),)
-                
-                ),
+                    )),
               ],
             ),
           ],

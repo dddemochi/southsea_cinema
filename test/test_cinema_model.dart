@@ -1,7 +1,7 @@
-import'package:flutter_test/flutter_test.dart';
+import 'package:flutter_test/flutter_test.dart';
 import 'package:southsea_cinema/models/southsea_cinema.dart';
 
-void main(){
+void main() {
   group('Movie', () {
     test('creates movie instance with given properties', () {
       const cinema = Movie(
@@ -12,7 +12,7 @@ void main(){
         capacity: 100,
         time: '2023-01-01 12:00',
         imagepath: 'assets/images/test_image.jpg',
-        description:'Test Description',
+        description: 'Test Description',
         price: 7.5,
         agerating: 'PG',
       );
@@ -40,7 +40,7 @@ void main(){
         capacity: 100,
         time: '2023-01-01 12:00',
         imagepath: 'assets/images/test_image.jpg',
-        description:'Test Description',
+        description: 'Test Description',
         price: 7,
         agerating: 'PG',
       );
@@ -59,4 +59,3 @@ void main(){
     });
   });
 }
-
