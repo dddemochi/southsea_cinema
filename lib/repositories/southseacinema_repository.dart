@@ -1,20 +1,10 @@
 import 'package:southsea_cinema/models/southsea_cinema.dart';
 
-
 class SouthseaCinemaRepository {
   List<Movie> getSouthseaCinemas() {
-    Movie? getSouthseaCinemaById(String id) {
-      for (final cinema in getSouthseaCinemas()) {
-        if (cinema.id == id) {
-          return cinema;
-        }
-      }
-      return null;
-    }
-
     return const [
       Movie(
-        id: 'SpiritedAway',
+        id: '0',
         name: 'Spirited Away',
         location: 'Southsea Cinema, UK',
         quantityoftickets:
@@ -28,7 +18,7 @@ class SouthseaCinemaRepository {
         agerating: '(12)',
       ),
       Movie(
-        id: 'Kaleidoscope (Hyaku iro Megane)',
+        id: '1',
         name: 'Kaleidoscope (Hyaku iro Megane)',
         location: 'Southsea Cinema, UK',
         quantityoftickets:
@@ -43,6 +33,14 @@ class SouthseaCinemaRepository {
         agerating: '(18)',
       ),
     ];
+  }
+  Movie? getMovieById(String id) {
+    for (final cinema in getSouthseaCinemas()) {
+      if (cinema.id == id) {
+        return cinema;
+      }
+    }
+    return null;
   }
 }
 
