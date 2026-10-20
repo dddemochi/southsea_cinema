@@ -93,6 +93,7 @@ class _TicketDropdownState extends State<TicketDropdown> {
           const SizedBox(width: 20),
           DropdownMenu<int>(
             initialSelection: 1,
+            textStyle: const TextStyle(color: Colors.black),
             inputDecorationTheme: const InputDecorationTheme(
               filled: true,
               fillColor: cinemaFontWhite,
