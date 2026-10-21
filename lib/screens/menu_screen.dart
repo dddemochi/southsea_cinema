@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:southsea_cinema/models/southsea_cinema.dart';
+import 'package:southsea_cinema/models/movie.dart';
 import 'package:southsea_cinema/repositories/southseacinema_repository.dart';
 import 'package:southsea_cinema/widgets/cinema_card.dart';
 

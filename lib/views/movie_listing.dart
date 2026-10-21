@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:southsea_cinema/constants.dart';
 import 'package:southsea_cinema/widgets/nav_drawer.dart';
-import 'package:southsea_cinema/models/southsea_cinema.dart';
+import 'package:southsea_cinema/models/movie.dart';
 
 class MovieListing extends StatelessWidget {
   final Movie cinema;
