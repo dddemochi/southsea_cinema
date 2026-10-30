@@ -32,6 +32,22 @@ class SouthseaCinemaRepository {
         price: 7.50,
         agerating: '(18)',
       ),
+      Movie(
+        id: '2',
+        name: 'Sakuran',
+        location: 'Southsea Cinema, UK',
+        quantityoftickets:
+            'Quantity of tickets you would like to buy keep in mind the maximum is 5',
+        capacity: 70,
+        time: 'Thursday 31 October 2026 20:00',
+        imagepath:
+            'assets/images/sakuran_poster.jpg',
+        description:
+            "Edo era, Japan. Kiyoha rises from the lowly courtesan ranks to the high class position of Oiran in the steamy red-light district of Yoshiwara. She is determined to stand on her own two feet and live life as she pleased.",
+        price: 6.00,
+        agerating: '(18)',
+      ),
+    
     ];
   }
 
