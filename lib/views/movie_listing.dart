@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:southsea_cinema/constants.dart';
 import 'package:southsea_cinema/widgets/nav_drawer.dart';
 import 'package:southsea_cinema/models/movie.dart';
+import 'package:southsea_cinema/widgets/reusable_button.dart';
 
 class MovieListing extends StatelessWidget {
   final Movie cinema;
@@ -122,48 +123,34 @@ class _TicketDropdownState extends State<TicketDropdown> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(height: 20),
-                ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.zero),
-                      backgroundColor: cinemaBrand,
-                    ),
-                    onPressed: () {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          content: Text(
-                              '$_ticketQuantity tickets were added to order'),
-                        ),
-                      );
-                    },
-                    child: const Text('Add to order',
-                        style: TextStyle(
-                          color: cinemaFontWhite,
-                        ))),
+                ReusableButton(
+                  text: 'Add to order',
+                  onPressed: () {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text(
+                            '$_ticketQuantity tickets were added to order'),
+                      ),
+                    );
+                  },
+                ),
               ],
             );
           } else {
             return Row(
               children: [
                 const SizedBox(width: 20),
-                ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.zero),
-                      backgroundColor: cinemaBrand,
-                    ),
-                    onPressed: () {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          content: Text(
-                              '$_ticketQuantity tickets were added to order'),
-                        ),
-                      );
-                    },
-                    child: const Text('Add to order',
-                        style: TextStyle(
-                          color: cinemaFontWhite,
-                        ))),
+                ReusableButton(
+                  text: 'Add to order',
+                  onPressed: () {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text(
+                            '$_ticketQuantity tickets were added to order'),
+                      ),
+                    );
+                  },
+                ),
               ],
             );
           }

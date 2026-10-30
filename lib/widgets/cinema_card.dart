@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:southsea_cinema/models/movie.dart';
 import 'package:southsea_cinema/constants.dart';
 import 'package:southsea_cinema/views/movie_listing.dart';
+import 'package:southsea_cinema/widgets/reusable_button.dart';
 
 class Cinemacard extends StatelessWidget {
   final Movie cinema;
@@ -77,26 +78,17 @@ class Cinemacard extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.zero),
-                      backgroundColor: cinemaBrand,
-                    ),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) {
-                          return MovieListing(cinema: cinema);
-                        }),
-                      );
-                    },
-                    child: const Text(
-                      'Book',
-                      style: TextStyle(
-                        color: Color(0xFFFFFFFF),
-                      ),
-                    )),
+                ReusableButton(
+  text: 'Book',
+  onPressed: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) {
+        return MovieListing(cinema: cinema);
+      }),
+    );
+  },
+),
               ],
             ),
           ],
