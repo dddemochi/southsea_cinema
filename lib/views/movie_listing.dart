@@ -13,10 +13,7 @@ class MovieListing extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text(appTitle, style: cinemaHeaderStyle),
-          backgroundColor: cinemaSurface,
-          iconTheme: const IconThemeData(color: cinemaBrand),
-          elevation: 0,
+          title: const Text(appTitle),
         ),
         drawer: const NavDrawer(),
         body: Container(
@@ -31,7 +28,7 @@ class MovieListing extends StatelessWidget {
                 Text(
                   cinema.name,
                   style: TextStyle(
-                      color: cinemaFontWhite,
+                      color: cinemaBrand,
                       fontSize: 18,
                       fontWeight: FontWeight.bold),
                 ),
