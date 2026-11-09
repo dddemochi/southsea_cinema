@@ -8,7 +8,7 @@ void main() {
         id: '1',
         name: 'Test Movie',
         location: 'Test Location',
-        quantityoftickets: '5',
+        quantity: '5',
         capacity: 100,
         time: '2023-01-01 12:00',
         imagepath: 'assets/images/test_image.jpg',
@@ -21,7 +21,7 @@ void main() {
       expect(cinema.id, equals('1'));
       expect(cinema.name, equals('Test Movie'));
       expect(cinema.location, equals('Test Location'));
-      expect(cinema.quantityoftickets, equals('5'));
+      expect(cinema.quantity, equals('5'));
       expect(cinema.capacity, equals(100));
       expect(cinema.time, equals('2023-01-01 12:00'));
       expect(cinema.imagepath, equals('assets/images/test_image.jpg'));
@@ -36,7 +36,7 @@ void main() {
         id: '1',
         name: 'Test Movie',
         location: 'Test Location',
-        quantityoftickets: '5',
+        quantity: '5',
         capacity: 100,
         time: '2023-01-01 12:00',
         imagepath: 'assets/images/test_image.jpg',
@@ -49,7 +49,7 @@ void main() {
       expect(cinema.id, equals('1'));
       expect(cinema.name, equals('Test Cinema'));
       expect(cinema.location, equals('Test Location'));
-      expect(cinema.quantityoftickets, equals('5'));
+      expect(cinema.quantity, equals('5'));
       expect(cinema.capacity, equals(100));
       expect(cinema.time, equals('2023-01-01 12:00'));
       expect(cinema.imagepath, equals('assets/images/test_image.jpg'));

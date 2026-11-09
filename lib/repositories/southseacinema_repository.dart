@@ -7,7 +7,7 @@ class SouthseaCinemaRepository {
         id: '0',
         name: 'Spirited Away',
         location: 'Southsea Cinema, UK',
-        quantityoftickets:
+        quantity:
             'Quantity of tickets you would like to buy keep in mind the maximum is 5',
         capacity: 100,
         time: 'Tuesday 14 October 2026 19:00',
@@ -21,12 +21,11 @@ class SouthseaCinemaRepository {
         id: '1',
         name: 'Kaleidoscope (Hyaku iro Megane)',
         location: 'Southsea Cinema, UK',
-        quantityoftickets:
+        quantity:
             'Quantity of tickets you would like to buy keep in mind the maximum is 5',
         capacity: 100,
         time: 'Wednesday 15 October 2026 21:00',
-        imagepath:
-            'assets/images/kaleidoscope_poster.jpg',
+        imagepath: 'assets/images/kaleidoscope_poster.jpg',
         description:
             "The film follows Amagi, a man hired by a police official to investigate Kaede Katsuragi, a mysterious stage actress suspected of something. When Amagi unexpectedly encounters Kaede at a theatre, he becomes fascinated by her and begins approaching her without revealing his true identity. Drawn deeper into her world, he eventually watches her secretly at night, hoping to discover the truth about her life",
         price: 7.50,
@@ -36,18 +35,16 @@ class SouthseaCinemaRepository {
         id: '2',
         name: 'Sakuran',
         location: 'Southsea Cinema, UK',
-        quantityoftickets:
+        quantity:
             'Quantity of tickets you would like to buy keep in mind the maximum is 5',
         capacity: 70,
         time: 'Thursday 31 October 2026 20:00',
-        imagepath:
-            'assets/images/sakuran_poster.jpg',
+        imagepath: 'assets/images/sakuran_poster.jpg',
         description:
             "Edo era, Japan. Kiyoha rises from the lowly courtesan ranks to the high class position of Oiran in the steamy red-light district of Yoshiwara. She is determined to stand on her own two feet and live life as she pleased.",
         price: 6.00,
         agerating: '(18)',
       ),
-    
     ];
   }
 

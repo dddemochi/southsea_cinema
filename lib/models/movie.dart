@@ -1,7 +1,7 @@
 class Movie {
   final String id;
   final String name;
-  final String quantityoftickets;
+  final String quantity;
   final int capacity;
   final double price;
   final String description;
@@ -13,7 +13,7 @@ class Movie {
   const Movie({
     required this.id,
     required this.name,
-    required this.quantityoftickets,
+    required this.quantity,
     required this.capacity,
     required this.description,
     required this.imagepath,
