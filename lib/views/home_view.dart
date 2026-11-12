@@ -5,6 +5,8 @@ import 'package:southsea_cinema/models/movie.dart';
 import 'package:southsea_cinema/repositories/southseacinema_repository.dart';
 import 'package:southsea_cinema/widgets/cinema_card.dart';
 
+
+
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
 

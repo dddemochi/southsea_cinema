@@ -3,6 +3,9 @@ import 'package:southsea_cinema/constants.dart';
 import 'package:southsea_cinema/widgets/nav_drawer.dart';
 import 'package:southsea_cinema/models/movie.dart';
 import 'package:southsea_cinema/widgets/reusable_button.dart';
+import 'package:southsea_cinema/models/cart_item.dart';
+import 'package:southsea_cinema/repositories/cart_repository.dart';
+
 
 class MovieListing extends StatelessWidget {
   final Movie cinema;
@@ -80,7 +83,21 @@ class TicketDropdown extends StatefulWidget {
 }
 
 class _TicketDropdownState extends State<TicketDropdown> {
-  int? _ticketQuantity = 1;
+  int _ticketQuantity = 1;
+
+  void _addToOrder() {
+    CartRepository.instance.addItem(
+      
+      CartItem(movie: widget.cinema, quantity: _ticketQuantity),
+    );
+debugPrint('Added, repository now has ${CartRepository.instance.getItems().length} lines');
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text('$_ticketQuantity tickets were added to order'),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -143,12 +160,7 @@ class _TicketDropdownState extends State<TicketDropdown> {
                 ReusableButton(
                   text: 'Add to order',
                   onPressed: () {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(
-                        content: Text(
-                            '$_ticketQuantity tickets were added to order'),
-                      ),
-                    );
+                    _addToOrder();
                   },
                 ),
               ],
