@@ -3,16 +3,17 @@ import 'package:southsea_cinema/models/movie.dart';
 import 'package:southsea_cinema/repositories/southseacinema_repository.dart';
 
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
   group('SouthseaCinemaRepository unit tests', () {
     test('getSouthseaCinemas returns two cinemas', () {
       final SouthseaCinemaRepository repository = SouthseaCinemaRepository();
-      final List<Movie> cinemas = repository.getSouthseaCinemas();
+      final List<Movie> cinemas = repository.getMovies();
 
-      expect(cinemas.length, 2);
+      expect(cinemas.length, 3);
     });
     test('getSandwiches contains valid Footlong and Six-Inch subs', () {
       final SouthseaCinemaRepository repository = SouthseaCinemaRepository();
-      final List<Movie> cinemas = repository.getSouthseaCinemas();
+      final List<Movie> cinemas = repository.getMovies();
 
       final Movie spiritedAway = cinemas[0];
       expect(spiritedAway.id, '0');
@@ -40,6 +41,17 @@ void main() {
       final Movie? movie = repository.getMovieById('non-existent');
 
       expect(movie, isNull);
+    });
+
+    test('loadMoviesFromAsset reads the bundled JSON menu', () async {
+      final SouthseaCinemaRepository repository = SouthseaCinemaRepository();
+      final List<Movie> movies = await repository.loadMoviesFromAsset();
+
+      expect(movies.length, 3);
+      expect(movies[0].id, '0');
+      expect(movies[1].id, '1');
+      expect(movies[2].id, '2');
+      expect(repository.getMovies(), movies);
     });
   });
 }

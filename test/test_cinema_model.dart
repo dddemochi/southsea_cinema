@@ -47,7 +47,7 @@ void main() {
 
       expect(cinema.formattedPrice, equals('£7.00'));
       expect(cinema.id, equals('1'));
-      expect(cinema.name, equals('Test Cinema'));
+      expect(cinema.name, equals('Test Movie'));
       expect(cinema.location, equals('Test Location'));
       expect(cinema.quantity, equals('5'));
       expect(cinema.capacity, equals(100));
@@ -58,4 +58,34 @@ void main() {
       expect(cinema.agerating, equals('PG'));
     });
   });
+  group('Movie model tests', () {
+    test('JSON conversion preserves every movie field', () {
+      final Map<String, dynamic> data = <String, dynamic>{
+        'id': '0',
+        'name': 'Spirited Away',
+        'description': 'A girl trapped in another world.',
+        'price': 5.00,
+        'imagePath': 'assets/images/spiritedaway_poster.webp',
+        'quantity': 'Maximum of 5 tickets',
+        'capacity': 100,
+        'time': 'Wednesday 14 October 2026 19:00',
+        'location': 'Southsea Cinema, UK',
+        'agerating': '(12)',
+      };
+
+      final Movie movie = Movie.fromJson(data);
+      expect(movie.id, '0');
+      expect(movie.name, 'Spirited Away');
+      expect(movie.description, 'A girl trapped in another world.');
+      expect(movie.price, 5.00);
+      expect(movie.imagepath, 'assets/images/spiritedaway_poster.webp');
+      expect(movie.quantity, 'Maximum of 5 tickets');
+      expect(movie.capacity, 100);
+      expect(movie.time, 'Wednesday 14 October 2026 19:00');
+      expect(movie.location, 'Southsea Cinema, UK');
+      expect(movie.agerating, '(12)');
+      expect(movie.toJson(), data);
+    });
+  });
 }
+

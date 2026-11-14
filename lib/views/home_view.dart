@@ -5,15 +5,13 @@ import 'package:southsea_cinema/models/movie.dart';
 import 'package:southsea_cinema/repositories/southseacinema_repository.dart';
 import 'package:southsea_cinema/widgets/cinema_card.dart';
 
-
-
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
     final southseaCinemaRepository = SouthseaCinemaRepository();
-    final List<Movie> cinemas = southseaCinemaRepository.getSouthseaCinemas();
+    final List<Movie> cinemas = southseaCinemaRepository.getMovies();
 
     return Scaffold(
       appBar: AppBar(
