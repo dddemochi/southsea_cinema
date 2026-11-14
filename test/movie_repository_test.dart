@@ -47,10 +47,15 @@ void main() {
       final SouthseaCinemaRepository repository = SouthseaCinemaRepository();
       final List<Movie> movies = await repository.loadMoviesFromAsset();
 
-      expect(movies.length, 3);
+      expect(movies.length, 5);
       expect(movies[0].id, '0');
       expect(movies[1].id, '1');
       expect(movies[2].id, '2');
+      expect(movies[2].name, 'Sakuran');
+      expect(movies[3].name, 'Princess Mononoke');
+      expect(movies[4].name, 'Nonexistent Movie');
+      expect(movies[3].id, '3');
+      expect(movies[4].id, '4');
       expect(repository.getMovies(), movies);
     });
   });

@@ -71,6 +71,4 @@ class Movie {
     };
     return data;
   }
-  
-
 }

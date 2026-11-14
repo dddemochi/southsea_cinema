@@ -16,7 +16,7 @@ class BasketScreen extends StatefulWidget {
 class _BasketScreenState extends State<BasketScreen> {
   String _confirmationMessage = '';
 
-    Widget _buildEmptyState() {
+  Widget _buildEmptyState() {
     return const Center(
       child: Padding(
         padding: EdgeInsets.symmetric(vertical: 32.0),
@@ -90,7 +90,7 @@ class _BasketScreenState extends State<BasketScreen> {
       children.add(_buildLineItem(cart, item, index));
     }
 
-        children.add(const SizedBox(height: 24));
+    children.add(const SizedBox(height: 24));
     children.add(
       _buildTotalRow(
         'Items subtotal',
@@ -105,7 +105,7 @@ class _BasketScreenState extends State<BasketScreen> {
       ),
     );
     children.add(const SizedBox(height: 24));
-        children.add(
+    children.add(
       SizedBox(
         width: double.infinity,
         child: ReusableButton(
@@ -119,7 +119,6 @@ class _BasketScreenState extends State<BasketScreen> {
         ),
       ),
     );
-
 
     if (_confirmationMessage.isNotEmpty) {
       children.add(const SizedBox(height: 12));
@@ -164,7 +163,7 @@ class _BasketScreenState extends State<BasketScreen> {
       content = _buildBasketList(cart, items);
     }
 
-       return Scaffold(
+    return Scaffold(
       appBar: AppBar(
         title: const Text(appTitle, style: cinemaHeaderStyle),
       ),

@@ -27,6 +27,17 @@ class Cinemacard extends StatelessWidget {
                   width: 240,
                   height: 360,
                   fit: BoxFit.cover,
+                  errorBuilder: (
+                    BuildContext context,
+                    Object error,
+                    StackTrace? stackTrace,
+                  ) {
+                    return const SizedBox(
+                      width: 80,
+                      height: 80,
+                      child: Center(child: Text('Image unavailable')),
+                    );
+                  },
                 ),
                 const SizedBox(width: 16),
                 Expanded(
@@ -79,16 +90,16 @@ class Cinemacard extends StatelessWidget {
                   ),
                 ),
                 ReusableButton(
-  text: 'Book',
-  onPressed: () {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) {
-        return MovieListing(cinema: cinema);
-      }),
-    );
-  },
-),
+                  text: 'Book',
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) {
+                        return MovieListing(cinema: cinema);
+                      }),
+                    );
+                  },
+                ),
               ],
             ),
           ],

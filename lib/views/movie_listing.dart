@@ -6,7 +6,6 @@ import 'package:southsea_cinema/widgets/reusable_button.dart';
 import 'package:southsea_cinema/models/cart_item.dart';
 import 'package:southsea_cinema/repositories/cart_repository.dart';
 
-
 class MovieListing extends StatelessWidget {
   final Movie cinema;
   final int maxQuantity;
@@ -87,10 +86,10 @@ class _TicketDropdownState extends State<TicketDropdown> {
 
   void _addToOrder() {
     CartRepository.instance.addItem(
-      
       CartItem(movie: widget.cinema, quantity: _ticketQuantity),
     );
-debugPrint('Added, repository now has ${CartRepository.instance.getItems().length} lines');
+    debugPrint(
+        'Added, repository now has ${CartRepository.instance.getItems().length} lines');
 
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(

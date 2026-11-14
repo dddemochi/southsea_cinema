@@ -4,7 +4,6 @@ class UserSettings {
   final String address;
   final bool receiveNewsletter;
 
-
   const UserSettings({
     this.name = '',
     this.email = '',

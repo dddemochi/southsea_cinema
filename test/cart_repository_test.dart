@@ -35,7 +35,6 @@ void main() {
   });
 
   group('CartRepository tests', () {
-
     test('starts with empty basket and zero totals', () {
       final CartRepository cart = CartRepository.instance;
 
