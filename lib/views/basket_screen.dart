@@ -16,6 +16,13 @@ class BasketScreen extends StatefulWidget {
 class _BasketScreenState extends State<BasketScreen> {
   String _confirmationMessage = '';
 
+    void _clearBasket(CartRepository cart) {
+    setState(() {
+      cart.clear();
+     _confirmationMessage = '';
+    });
+  }
+
   Widget _buildEmptyState() {
     return const Center(
       child: Padding(
@@ -116,6 +123,19 @@ class _BasketScreenState extends State<BasketScreen> {
               _confirmationMessage = 'Thanks, your order is on its way';
             });
           },
+        ),
+      ),
+    );
+     children.add(const SizedBox(height: 12));
+    children.add(
+      SizedBox(
+        width: double.infinity,
+        child: OutlinedButton(
+          style: OutlinedButton.styleFrom(foregroundColor: cinemaFontWhite),
+          onPressed: () {
+            _clearBasket(cart);
+          },
+          child: const Text('Clear basket'),
         ),
       ),
     );
